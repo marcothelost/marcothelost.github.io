@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { HomePage } from './pages/HomePage';
+import { HomePage } from '@pages/HomePage';
 
-import { AppRoute } from './utils/route';
+import { AppRoute } from '@utils/route';
 
-import './styles/main.css';
+import '@styles/main.css';
 
 export const App: React.FC = () => (
   <Routes>
