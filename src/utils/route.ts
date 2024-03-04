@@ -14,4 +14,5 @@ export const PAGE_TITLE_SPLITTER = ' | ';
  */
 export enum AppRoute {
   HOME = '/',
+  NOT_FOUND = '*',
 }
