@@ -7,7 +7,7 @@ import { PAGE_TITLE_BASE, PAGE_TITLE_SPLITTER } from '@utils/route';
 
 interface Props {
   title?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const DefaultLayout: React.FC<Props> = ({ title, children }) => {

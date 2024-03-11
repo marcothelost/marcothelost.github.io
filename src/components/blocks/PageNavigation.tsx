@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { Button } from '@components/elements/Button';
+
 import { AppRoute } from '@utils/route';
 
 export const PageNavigation: React.FC = () => {
@@ -8,7 +10,7 @@ export const PageNavigation: React.FC = () => {
 
   return (
     <nav className="flex items-center p-6">
-      <div className="mr-6 h-8 w-8 rounded bg-zinc-700" />
+      <div className="mr-6 h-8 w-8 rounded bg-green-700" />
       <ul className="flex gap-6">
         <li
           className={`transition-all hover:opacity-100${location.pathname.startsWith(AppRoute.HOME) ? ' opacity-100' : ' opacity-70'}`}
@@ -41,9 +43,7 @@ export const PageNavigation: React.FC = () => {
           <Link to={AppRoute.HOME}>Contact me</Link>
         </li>
       </ul>
-      <button className="ml-auto rounded bg-rose-800 px-4 py-2">
-        Let&apos;s work together
-      </button>
+      <Button text="Let's work together" variant="primary" />
     </nav>
   );
 };
