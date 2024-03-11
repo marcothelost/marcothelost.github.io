@@ -9,9 +9,9 @@ export const PageNavigation: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="p-6">
+    <nav className="absolute top-0 w-full p-6">
       <div className="mx-auto flex max-w-7xl items-center">
-        <div className="mr-6 h-8 w-8 rounded bg-green-700" />
+        <div className="mr-6 h-6 w-6 rounded-sm bg-green-700" />
         <ul className="flex gap-6">
           <li
             className={`text-sm transition-all hover:opacity-100${location.pathname.startsWith(AppRoute.HOME) ? ' opacity-100' : ' opacity-70'}`}
@@ -44,7 +44,14 @@ export const PageNavigation: React.FC = () => {
             <Link to={AppRoute.HOME}>Contact me</Link>
           </li>
         </ul>
-        <Button text="Let's work together" variant="primary" icon="handshake" />
+        <div className="ml-auto">
+          <Button
+            text="Let's work together"
+            variant="primary"
+            size="small"
+            icon="handshake"
+          />
+        </div>
       </div>
     </nav>
   );
